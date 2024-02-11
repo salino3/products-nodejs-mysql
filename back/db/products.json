@@ -1,0 +1,20 @@
+{
+    "products": [
+        {
+            "id": "23udkk3",
+            "name": "Shovel",
+            "quantity": 12,
+            "code": "wu45lz",
+            "price": 70,
+            "company": "Don Mario"
+        },
+        {
+            "id": "23udk44",
+            "name": "oven",
+            "quantity": 3,
+            "code": "weRTlz",
+            "price": 20000,
+            "company": "Pizzando"
+        }
+    ]
+}
