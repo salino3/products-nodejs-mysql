@@ -1,6 +1,6 @@
 export interface ProductObjProps {
 
-    id: string;
+    id?: string;
     name: string;
     quantity: number;
     code: string;
