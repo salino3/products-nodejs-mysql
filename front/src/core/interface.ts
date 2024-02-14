@@ -4,7 +4,13 @@ interface GET_PRODUCTS {
   payload: ProductProps[];
 };
 
-export type All_Actions = GET_PRODUCTS;
+
+interface GET_PRODUCT {
+  type: "GET_PRODUCT";
+  payload: ProductProps;
+};
+
+export type All_Actions = GET_PRODUCTS | GET_PRODUCT;
 
 
 //
