@@ -7,7 +7,11 @@ export const ProductReducer = (state: State, action: All_Actions) => {
         ...state,
         products: action.payload,
       };
-
+    case "GET_PRODUCT":
+      return {
+        ...state,
+        product: action.payload,
+      };
 
     default:
       return state;

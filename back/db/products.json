@@ -2,19 +2,19 @@
   "products": [
     {
       "name": "Shovel",
-      "quantity": 20,
+      "quantity": "90",
       "code": "wu45lz",
-      "price": 70,
+      "price": "70",
       "company": "Don Mario",
       "id": "23udkk3"
     },
     {
-      "id": "23udk44",
       "name": "oven",
-      "quantity": 3,
+      "quantity": "70",
       "code": "weRTlz",
-      "price": 20000,
-      "company": "Pizzando"
+      "price": "20000",
+      "company": "Pizzando",
+      "id": "23udk44"
     }
   ]
 }

@@ -10,6 +10,8 @@ interface GET_PRODUCT {
   payload: ProductProps;
 };
 
+
+
 export type All_Actions = GET_PRODUCTS | GET_PRODUCT;
 
 
@@ -35,6 +37,9 @@ export interface State {
 export interface MyState {
   state: State;
   dispatch: React.Dispatch<All_Actions>;
+  getProducts: () => Promise<void>;
+  getOneProduct: (id: string) => Promise<void>;
+  updateProductData: (item: ProductProps) => Promise<void>;
 };
 
 //
