@@ -15,13 +15,12 @@ export type All_Actions = GET_PRODUCTS | GET_PRODUCT;
 
 //
 export interface ProductProps {
-
-    id?: string;
-    name: string;
-    quantity: number;
-    code: string;
-    price: number,
-    comapny: string;
+  id?: string;
+  name: string;
+  quantity: number;
+  code: string;
+  price: number;
+  company: string;
 };
 
 
@@ -40,14 +39,14 @@ export interface MyState {
 
 //
 export const initialState = {
-    theme: "light",
-    products: [],
-    product: {
+  theme: "light",
+  products: [],
+  product: {
     id: "",
     name: "",
     quantity: 0,
     code: "",
     price: 0,
-    comapny: ""
-    }
+    company: "",
+  },
 };

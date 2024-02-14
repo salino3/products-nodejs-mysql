@@ -9,7 +9,7 @@ export const ProductProvider: React.FC<Props> = ({children}) => {
 
     const [state, dispatch] = React.useReducer( ProductReducer, initialState);
 
-const getProduct = async () => {
+const getProduct = React.useCallback( async () => {
  
    const res = await fetch("http://localhost:5000/api/products");
    const response = await res.json();
@@ -17,7 +17,7 @@ const getProduct = async () => {
     type: "GET_PRODUCTS",
     payload: response
    })
-};
+}, [dispatch]);
 
 React.useEffect(() => {
   getProduct();
