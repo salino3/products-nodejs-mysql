@@ -1,12 +1,21 @@
 
 .containerCard {
-    border: solid darkblue 2px;
     width: min-content;
     white-space: nowrap;
-    padding: 12px;
-    background: rgba(128,128,128, 0.8);
     border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
+
+.contentCard {
+    padding: 12px;
+    width: min-content;
+    background: rgba(128,128,128, 0.8);
+    border-radius: 5px;
 }
 
 .spanKey {

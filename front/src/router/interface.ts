@@ -1,7 +1,7 @@
 
 export interface Routes {
     root: string;
-    productInfo: string;
+    productInfo: string
 };
 
 export const SwitchRoutes: Routes = {

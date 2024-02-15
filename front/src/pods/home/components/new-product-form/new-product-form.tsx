@@ -1,70 +1,71 @@
-
 import React from "react";
-import { useParams } from "react-router-dom";
-import { GlobalContext, MyState, ProductProps, useProducts } from "@/core";
-import { CardProduct } from "@/common-app";
-import "./product-info.styles.css";
-
-export const ProductInfo: React.FC = () => {
-  const { getOneProduct, state } = React.useContext<MyState>(GlobalContext);
-  const { product } = state || {};
-  const {updateProductData} = useProducts();
-
-  const params = useParams();
-
-  const initialData = {
-    name: "",
-    company: "",
-    quantity: 0,
-    code: "",
-    price: 0,
-  };
-
-  const [productData, setProductData] = React.useState<ProductProps>(initialData);
+import { ProductProps, useProducts } from "@/core";
+import './new-product-form.style.css';
 
 
+export const NewProductForm: React.FC = () => {
+
+    const {createProduct} = useProducts();
+
+
+    const initialData = {
+      name: "",
+      company: "",
+      quantity: null,
+      code: "",
+      price: null,
+    };
+
+    const [productData, setProductData] =
+      React.useState<ProductProps>(initialData);
+
+
+      
 const handleChange = (key: keyof ProductProps) => (event: any) => {
   let { value } = event.target;
 
-  if (
-    (key === "quantity" && parseInt(value) < 0) ||
-    (key === "price" && parseInt(value) < 0)
-  ) {
-    value = 0;
-  };
+    if (
+      (key === "quantity" && parseInt(value) < 0) ||
+      (key === "price" && parseInt(value) < 0)
+    ) {
+      value = 0;
+    };
   setProductData({ ...productData, [key]: value });
 };
 
 
-  const handleUpdate: React.FormEventHandler<HTMLFormElement> | undefined = (
+ const handleUpdate: React.FormEventHandler<HTMLFormElement> | undefined = async (
     event: React.FormEvent<HTMLFormElement>
   ) => {
        event.preventDefault();
 
-    updateProductData(productData)
+       const newProduct = await createProduct(productData);
+       console.log(newProduct)
   };
 
-  React.useEffect(() => {
-    if (params && params?.id && productData == initialData) {
-      getOneProduct(params?.id);
-    };
-    
-    setProductData(product);
-  }, [params?.id, product]);
+
+  //
+  const handleReset = () => {
+    setProductData(initialData); 
+  };
 
 
   return (
-    <div className="container">
-      <h1>Update Task</h1>
-      {params.id}
-      <CardProduct hidden={false} item={product} />
-      <form action="/api/products" onSubmit={handleUpdate}>
+    <div>
+      <h2>Create new Product form</h2>
+      <form
+        onReset={handleReset}
+        action="/api/products"
+        className="createForm"
+        onSubmit={handleUpdate}
+      >
         <div>
           <label htmlFor="name">Name</label> <br />
           <input
             type="text"
             id="name"
             name="name"
+            required
             onChange={handleChange("name")}
             value={productData?.name}
           />
@@ -75,6 +76,7 @@ const handleChange = (key: keyof ProductProps) => (event: any) => {
             type="text"
             id="company"
             name="company"
+            required
             onChange={handleChange("company")}
             value={productData?.company}
           />
@@ -86,6 +88,7 @@ const handleChange = (key: keyof ProductProps) => (event: any) => {
             id="quantity"
             min={0}
             name="quantity"
+            required
             onChange={handleChange("quantity")}
             value={productData?.quantity || ""}
           />
@@ -96,6 +99,7 @@ const handleChange = (key: keyof ProductProps) => (event: any) => {
             type="text"
             id="code"
             name="code"
+            required
             onChange={handleChange("code")}
             value={productData?.code}
           />
@@ -105,14 +109,21 @@ const handleChange = (key: keyof ProductProps) => (event: any) => {
           <input
             type="number"
             id="price"
-            name="price"
             min={0}
+            name="price"
+            required
             onChange={handleChange("price")}
             value={productData?.price || ""}
           />
         </div>
-        <br />
-        <button type="submit">update Product</button>
+        <div className="boxBtnSubmit">
+          <div className="boxBtnCreate">
+            <button type="submit">Create Product</button>
+          </div>
+          <div className="boxBtnReset">
+            <button type="reset">Reset Form</button>
+          </div>
+        </div>
       </form>
     </div>
   );

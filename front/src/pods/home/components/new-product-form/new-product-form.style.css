@@ -1,0 +1,44 @@
+
+.createForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 12px;
+}
+
+.boxBtnSubmit {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+
+.boxBtnReset {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.boxBtnCreate {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.boxBtnSubmit  button {
+    cursor: pointer;
+}
+
+.boxBtnSubmit button:active {
+    border: solid yellow;
+    color: gold;
+}

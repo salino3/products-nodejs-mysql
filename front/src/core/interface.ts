@@ -19,9 +19,9 @@ export type All_Actions = GET_PRODUCTS | GET_PRODUCT;
 export interface ProductProps {
   id?: string;
   name: string;
-  quantity: number;
+  quantity: number | null;
   code: string;
-  price: number;
+  price: number | null;
   company: string;
 };
 
@@ -39,7 +39,6 @@ export interface MyState {
   dispatch: React.Dispatch<All_Actions>;
   getProducts: () => Promise<void>;
   getOneProduct: (id: string) => Promise<void>;
-  updateProductData: (item: ProductProps) => Promise<void>;
 };
 
 //

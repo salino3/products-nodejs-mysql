@@ -1,9 +1,17 @@
 
+.rootHome {
+    display: flex;
+    flex-direction: column;
+    align-items: strech;
+    justify-content: center;
+}
+
 
 .list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     grid-gap: 20px;
-
+    justify-content: center;
+    align-items: center;
 }
 

@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Shovel",
-      "quantity": "90",
+      "quantity": "50",
       "code": "wu45lz",
       "price": "70",
       "company": "Don Mario",
@@ -10,11 +10,91 @@
     },
     {
       "name": "oven",
-      "quantity": "70",
+      "quantity": "30",
       "code": "weRTlz",
       "price": "20000",
-      "company": "Pizzando",
+      "company": "Pizzeando",
       "id": "23udk44"
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": "150",
+      "code": "qhdyGG",
+      "price": "20",
+      "company": "Formaggi country",
+      "id": "4e84d027-2cf7-4950-8dfc-dadb764c4301"
+    },
+    {
+      "name": "Vino",
+      "quantity": "200",
+      "code": "qw34dF",
+      "price": "15",
+      "company": "Casadelli",
+      "id": "f52b54c3-8f2c-463b-9377-27ed63638ed3"
+    },
+    {
+      "id": "7749243e-f604-401d-ab37-734e79c6191c",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "6a8f984a-0425-487e-8d57-7f65eb2b1f04",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "4b390c02-84dc-43f0-b829-80d86582453e",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "398e9f5a-06b3-4cb8-ba8f-cec01477f1e1",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "b6cec293-a782-4fda-8b12-8b5b53fc0040",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "41d35c65-72bf-4ce8-bdec-33c3daa78a2f",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "5a9814e3-0548-48d5-9b66-76e41955fcb0",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
+    },
+    {
+      "id": "3055f49b-443f-423c-a593-bf4fdf08a0b4",
+      "name": "Vino bianco",
+      "company": "Casadelli",
+      "quantity": "150",
+      "code": "GfD2r4",
+      "price": "14"
     }
   ]
 }
