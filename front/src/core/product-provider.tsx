@@ -31,15 +31,13 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
   );
 
 
-
   React.useEffect(() => {
     getProducts();
   }, [dispatch, state?.products]);
 
   return (
     <GlobalContext.Provider
-      value={{ state, dispatch, getProducts, getOneProduct }}
-    >
+      value={{ state, dispatch, getProducts, getOneProduct }}>
       {children}
     </GlobalContext.Provider>
   );

@@ -1,7 +1,8 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
-import { GlobalContext, MyState, ProductProps, useProducts } from "@/core";
+import { GlobalContext, MyState, ProductProps } from "@/core";
+import { useProducts } from "@/hooks";
 import { CardProduct } from "@/common-app";
 import "./product-info.styles.css";
 

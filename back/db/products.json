@@ -3,7 +3,7 @@
     {
       "name": "Shovel",
       "quantity": "50",
-      "code": "wu45lz",
+      "code": "AAs34d",
       "price": "70",
       "company": "Don Mario",
       "id": "23udkk3"
@@ -41,60 +41,12 @@
       "price": "14"
     },
     {
-      "id": "6a8f984a-0425-487e-8d57-7f65eb2b1f04",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "4b390c02-84dc-43f0-b829-80d86582453e",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "398e9f5a-06b3-4cb8-ba8f-cec01477f1e1",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "b6cec293-a782-4fda-8b12-8b5b53fc0040",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "41d35c65-72bf-4ce8-bdec-33c3daa78a2f",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "5a9814e3-0548-48d5-9b66-76e41955fcb0",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
-    },
-    {
-      "id": "3055f49b-443f-423c-a593-bf4fdf08a0b4",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
+      "name": "Bufala",
+      "quantity": "120",
+      "code": "wEJkO3",
+      "price": "30",
+      "company": "Marotta",
+      "id": "11f2fabf-defd-49ae-ab8e-8dfc0bf69fe6"
     }
   ]
 }

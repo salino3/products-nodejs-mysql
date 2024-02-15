@@ -1,5 +1,6 @@
 import React from "react";
-import { ProductProps, useProducts } from "@/core";
+import { ProductProps } from "@/core";
+import { useProducts } from "@/hooks";
 import './new-product-form.style.css';
 
 
