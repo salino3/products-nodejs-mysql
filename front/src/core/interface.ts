@@ -54,3 +54,8 @@ export const initialState = {
     company: "",
   },
 };
+
+export const routesApp = {
+  products: "http://localhost:5000/api/products",
+};
+

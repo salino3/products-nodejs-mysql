@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ProductProps } from "@/core";
+import { useProducts } from "@/hooks";
 import { SwitchRoutes } from "@/router";
 import './card-product.styles.css';
 
@@ -12,6 +13,8 @@ interface Props {
 
 export const CardProduct: React.FC<Props> = (props) => {
     const {item, customeStyles, hidden = true} = props;
+
+    const {deleteProduct} = useProducts();
 
     const navigate = useNavigate();
 
@@ -48,7 +51,9 @@ export const CardProduct: React.FC<Props> = (props) => {
               >
                 Update
               </button>
-              <button className="deleteBtn">Delete</button>
+              <button onClick={() => deleteProduct(item?.id || "")} className="deleteBtn">
+                Delete
+              </button>
             </div>
           )}
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { SwitchRoutes } from "@/router";
-import { MyState, ProductProps } from "../core/interface";
+import { MyState, ProductProps, routesApp } from "@/core/interface";
 import { GlobalContext } from "../core/global-context";
 
 export const useProducts = () => {
@@ -13,7 +13,7 @@ export const useProducts = () => {
     async (item: ProductProps) => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/products/${item?.id}`,
+          `${routesApp.products}/${item?.id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -25,7 +25,7 @@ export const useProducts = () => {
           throw new Error("Failed to update product");
         } else {
           navigate(SwitchRoutes.root);
-        }
+        };
       } catch (error) {
         console.error(error);
       }
@@ -37,7 +37,7 @@ export const useProducts = () => {
   const createProduct = React.useCallback(
     async (item: ProductProps) => {
       try {
-        const newProduct = await fetch("http://localhost:5000/api/products", {
+        const newProduct = await fetch(`${routesApp.products}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(item),
@@ -51,13 +51,36 @@ export const useProducts = () => {
         }
       } catch (error) {
         console.error(error);
-      }
+      };
     },
     [dispatch]
   );
 
+  //
+  const deleteProduct = React.useCallback(async (id: string) => {
+
+    try {
+      const response = await fetch(`${routesApp.products}/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update product");
+      } else {
+        alert("Product deleted succesfully!")
+        return true;
+      };
+    } catch (error) {
+      console.error(error);
+    };
+  }, [dispatch]);
+
   return {
     updateProductData,
     createProduct,
+    deleteProduct,
   };
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { GlobalContext, ProductProps, ProductReducer, initialState } from ".";
+import { GlobalContext, ProductProps, ProductReducer, initialState, routesApp } from ".";
 
 interface Props {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = React.useReducer(ProductReducer, initialState);
 
   const getProducts = React.useCallback(async () => {
-    const res = await fetch("http://localhost:5000/api/products");
+    const res = await fetch(`${routesApp.products}`);
     const response = await res.json();
     dispatch({
       type: "GET_PRODUCTS",
@@ -20,7 +20,7 @@ export const ProductProvider: React.FC<Props> = ({ children }) => {
 
   const getOneProduct = React.useCallback(
     async (id: string) => {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`);
+      const res = await fetch(`${routesApp.products}/${id}`);
       const response: ProductProps = await res.json();
       dispatch({
         type: "GET_PRODUCT",

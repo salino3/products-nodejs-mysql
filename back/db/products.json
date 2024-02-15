@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Shovel",
-      "quantity": "50",
+      "quantity": "60",
       "code": "AAs34d",
       "price": "70",
       "company": "Don Mario",
@@ -15,30 +15,6 @@
       "price": "20000",
       "company": "Pizzeando",
       "id": "23udk44"
-    },
-    {
-      "name": "Mozzarella",
-      "quantity": "150",
-      "code": "qhdyGG",
-      "price": "20",
-      "company": "Formaggi country",
-      "id": "4e84d027-2cf7-4950-8dfc-dadb764c4301"
-    },
-    {
-      "name": "Vino",
-      "quantity": "200",
-      "code": "qw34dF",
-      "price": "15",
-      "company": "Casadelli",
-      "id": "f52b54c3-8f2c-463b-9377-27ed63638ed3"
-    },
-    {
-      "id": "7749243e-f604-401d-ab37-734e79c6191c",
-      "name": "Vino bianco",
-      "company": "Casadelli",
-      "quantity": "150",
-      "code": "GfD2r4",
-      "price": "14"
     },
     {
       "name": "Bufala",
