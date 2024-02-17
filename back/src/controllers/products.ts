@@ -11,7 +11,7 @@ export const getAllProducts = async (req: Request, res: Response): Promise<void>
     );
 
     if (!products || products.data.length < 1) {
-      res.sendStatus(204).send({ message: "The list is empty" });
+      res.status(404).send({ message: "The list is empty" });
       return;
     };
 
@@ -58,8 +58,7 @@ export const createProduct = async ( req: Request, res: Response): Promise<void>
         res.status(204).send({message: "Error for create a product"});
         return;
     };
-
-    res.status(200).send(newProduct.data);
+    res.status(200).send({newData: newProduct?.data, message: "Product created Successfully" });
   } catch (error) {
    console.error(error);
    res.sendStatus(500);
