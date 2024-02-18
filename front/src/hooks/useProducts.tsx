@@ -8,6 +8,7 @@ export const useProducts = () => {
   const { dispatch } = React.useContext<MyState>(GlobalContext);
   const navigate = useNavigate();
 
+
   //
   const updateProductData = React.useCallback(
     async (item: ProductProps) => {
@@ -20,10 +21,13 @@ export const useProducts = () => {
             body: JSON.stringify(item),
           }
         );
-
+        const res = await response.json();
         if (!response.ok) {
+          console.log("RESPONSE: ", res?.message);
+
           throw new Error("Failed to update product");
         } else {
+          console.log("RESPONSE: ", res);
           navigate(SwitchRoutes.root);
         };
       } catch (error) {
@@ -43,12 +47,15 @@ export const useProducts = () => {
           body: JSON.stringify(item),
         });
 
+        
         const newProductData = await newProduct.json();
+   
         if (!newProduct.ok) {
           throw new Error("Failed to create new product");
         } else {
+          console.log("RESPONSE: ", newProductData?.message);
           return newProductData;
-        }
+        };
       } catch (error) {
         console.error(error);
       };
@@ -66,10 +73,11 @@ export const useProducts = () => {
           "Content-Type": "application/json"
         }
       });
-
+       const res = await response.json();
       if (!response.ok) {
         throw new Error("Failed to update product");
       } else {
+        console.log("RESPONSE: ", res?.message);
         alert("Product deleted succesfully!")
         return true;
       };
@@ -81,6 +89,6 @@ export const useProducts = () => {
   return {
     updateProductData,
     createProduct,
-    deleteProduct,
+    deleteProduct
   };
 };
